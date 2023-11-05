@@ -17,16 +17,16 @@ class ActivationFunction:
             '''Compute the derivative of sigmoid, assuming x is sigmoid output.'''
             return x * (1 - x)
         
-    class LeakyReLu:
+    class ReLU:
         @staticmethod
-        def func(x, alpha=0.01):
+        def func(x):
             '''Compute the Leaky ReLU of x.'''
-            return np.where(x > 0, x, x * alpha)
+            return np.where(x >= 0, x, 0)
 
         @staticmethod
-        def func_derivative(x, alpha=0.01):
+        def func_derivative(x):
             '''Compute the derivative of Leaky ReLU, alpha is the slope for x < 0.'''
-            return np.where(x > 0, 1, alpha)
+            return np.where(x >= 0, 1, 0)
 
     class HyperbolicTangent:
         @staticmethod
