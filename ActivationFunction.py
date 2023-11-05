@@ -4,7 +4,7 @@ class ActivationFunction:
     '''
     A collection of static methods for different activation functions.
     Methods are static because they don't need to access or modify the class's state or instance data.
-    These activation function classes under under ActivationFunction class just for organization and code modularity.
+    These activation function classes are under ActivationFunction class just for organization and code modularity.
     '''
     class Sigmoid:
         @staticmethod
